@@ -10,13 +10,20 @@
         <div>
             <p>published: 18.04.2018, 11:00</p>
             <h2><a href="">Chin Yu Hwei first post</a></h2>
-            <p>가지마, 씨발년아</p>
+            <p>가지마</p>
         </div>
 
         <div>
             <p>published: 18.04.2018, 11:00</p>
             <h2><a href="">Chin Yu Hwei second post</a></h2>
-            <p>오지마, 씨발새꺄</p>
+            <p>오지마</p>
         </div>
+
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
